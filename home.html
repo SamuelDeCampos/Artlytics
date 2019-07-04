@@ -1,0 +1,747 @@
+<!DOCTYPE  html>
+<html lang="en">
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <title >{{  }}</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        body > *{
+            font-family: 'Roboto', sans-serif;
+            transition: 0.5s;
+        }
+        a:hover{
+            color: blue !important;
+        }
+        .navbar {
+            height: 80px;
+            width: 100;
+        }
+        .onglet > *{
+            margin-left: 35px;
+        }
+        .main-section {
+            background-image: url("https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/up-back.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            font-family: 'Roboto', sans-serif;
+        }
+        .header {
+            font-size: 71px;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+        .description {
+            font-size: 26px;
+            line-height: 0.4;
+            font-weight: 400;
+            color: #98978E;
+        }
+        .navbar {
+            height: 60px;
+            width: calc(100% - 150px);
+            padding: 20px;
+            padding-left: 75px;
+            padding-right: 75px;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .gauche {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .nom {
+            padding-left: 10px;
+            font-size: 27px;
+            line-height: 1.3;
+            font-weight: 400;
+        }
+        .onglet {
+            display: flex;
+            align-items: center;
+        }
+        .sign-up {
+            display: block;
+            background-color: #361FFB;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 0.3em;
+            cursor: pointer;
+        }
+        .barre-recherche {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            margin-top: 50px
+            
+        }
+        .search {
+            width: 60%;
+            padding: 30px;
+            outline: none;
+            border-right: none;
+            border: none;
+            border-radius: 0.3em 0 0 0.3em;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+        .searchButton {
+            width: 4%;
+            border: none;
+            background:  #361FFB;
+            border-radius: 0 0.3em 0.3em 0;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+        .sbutton {
+            color: white;
+        }
+        .second-section {
+            height: 50vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 1170px;
+            margin: auto;
+            padding-top: 30px;
+        }
+        .performance-dashboard {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+        }
+        .instant-search {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+        }
+        .tailored-alerts {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+        .second-name {
+            font-size: 20px;
+            line-height: 2;
+            font-weight: 500;
+            color: black;
+        }
+        .second-description {
+            line-height: 0.4;
+            color: #98978E;
+        }
+        .second-logo {
+            padding-bottom: 20px;
+        }
+        .third-section {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            max-width: 1170px;
+            margin: auto;
+        }
+        .third-title {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 20px;
+          align-items: center;
+        }
+        .card-space {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+        }
+        .card {
+          width: 24%;
+          display: flex
+          flex-direction: column;
+          cursor: pointer;
+        }
+        .pic {
+          padding-top: 136%;
+          background-size: cover;
+        }
+        .pic-title {
+          display: flex;
+          font-size: 20px;
+          line-height: 2;
+          font-weight: 400;
+          color: black;
+          align-items: center;
+          padding-top: 13px;
+        }
+        .pic-subtitle {
+          line-height: 0.4;
+          color: #98978E;
+        }
+        .name {
+          font-size: 29px;
+          font-weight: 300;
+        }
+        .fourth-section {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          max-width: 1170px;
+          margin: auto;
+          padding-top: 100px;
+        }
+        .note {
+          display: block;
+          background-color: #5DEA21;
+          color: white;
+          height: 23px;
+          width: 57px;
+          border-radius: 0.9em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 15px;
+          font-size: 15px;
+        }
+        .section-five {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          max-width: 1170px;
+          margin: auto;
+          padding-top: 100px;
+        }
+        .pic-five {
+          padding-top: 75%;
+          background-size: cover;
+        }
+        .section-six {
+          background-color: #333333;
+          background-size: cover;
+          width: 100%;
+        }
+        .droite-top {
+          height: 60px;
+          width: calc(100% - 150px);
+          display: flex;
+          align-items: center;
+        }
+        .gauche-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .top {
+          padding: 20px;
+          padding-top: 40px;
+          padding-left: 75px;
+          padding-right: 75px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 75px;
+        }
+        .middle {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 40px;
+          padding-left: 75px;
+          padding-right: 75px;
+        }
+        .link-middle {
+          display: flex;
+          cursor: pointer;
+          flex-direction: column;
+          line-height: 1.6;
+        }
+        .bot {
+          padding-top: 30px;
+          padding-left: 75px;
+          padding-right: 75px;
+          padding-bottom: 40px;
+          color: #999999;
+        }
+    </style>
+
+</head>
+<body>
+  <div class="navbar">
+    <a href="default.asp" style="text-decoration: none ; color: black">
+      <div class="gauche">
+        <spam class="logo">
+         <img src="https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/logo_blue.svg" alt="logo-navbar" width="60px" height="auto">
+        </spam>
+        <spam class="nom">
+          Artlytics
+        </spam>
+      </div>
+    </a>
+    <div class="onglet">
+        <div style="cursor: pointer">
+            <a href="default.asp" style="text-decoration: none ; color: black">Discover</a>
+        </div>
+        <div style="cursor: pointer">
+            <a href="default.asp" style="text-decoration: none ; color: black">Market analysis</a>
+        </div>
+        <div style="cursor: pointer">
+            <a href="default.asp" style="text-decoration: none ; color: black">Artists</a>
+        </div>
+        <div style="cursor: pointer">
+            <a href="default.asp" style="text-decoration: none ; color: black">Auctions</a>
+        </div>
+        <div style="cursor: pointer">
+            <a href="default.asp" style="text-decoration: none ; color: black">Pricing</a>
+        </div>
+        <div style="cursor: pointer">
+            <a href="default.asp" style="text-decoration: none ; color: #98978E">Blog</a>
+        </div>
+        <div style="cursor: pointer">
+            <a href="default.asp">Sign in</a>
+        </div>
+        <div class="sign-up">
+            <a href="default.asp" style="text-decoration: none ; color: white">Sign up</a> 
+        </div>
+    </div>
+  </div>
+
+
+
+  <div class="main-section">
+    <spam class="header">A Complete Art Analytics Plateform</spam>
+      <spam class="description"> 
+        <p>We make access to the art market easier.</p>
+        <p>A database of more than <spam style="color: #657FF2">100.000 artists</spam> and <spam style="color: #657FF2">900 000 auction results</spam> updated daily</p>
+       </spam>
+    <div class="barre-recherche">
+      <input type="text" class="search" placeholder="Search for an artist, an auction, an artwork....">
+      <button type="submit" class="searchButton">
+        <i class="material-icons sbutton">search</i>
+      </button>
+    </div>
+  </div>
+
+
+
+  
+  <div class="second-section">
+    <div class="performance-dashboard">
+      <div class="second-logo">
+        <img src="https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/icon1.svg" alt="logo-dashboard" width="60px" height="auto">
+      </div>
+      <div class="second-name">
+        Performance Dashboard
+      </div>
+      <div class="second-description">
+        <p>A comprehensive approach using artificial</p>
+        <p>intelligence to evaluate artist performance</p>
+        <p>and trends in the market</p>
+      </div>
+    </div>
+    <div class="instant-search">
+      <div class="second-logo">
+        <img src="https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/icon2.svg" alt="logo-dashboard" width="60px" height="auto">
+      </div>
+      <div class="second-name">
+        Instant Search
+      </div>
+      <div class="second-description">
+        <p>Deep dive into art market differently.</p>
+        <p>Search Auctions results, Exhibitions,</p>
+        <p>Artists</p>
+      </div>
+    </div>
+    <div class="tailored-alerts">
+      <div class="second-logo">
+        <img src="https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/icon3.svg" alt="logo-dashboard" width="60px" height="auto">
+      </div>
+      <div class="second-name">
+        Tailored Alerts
+      </div>
+      <div class="second-description">
+        <p>Track and follow your favourite artists. Get</p>
+        <p>instant updates about auction prices</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="third-section">
+    <div class="third-title">
+      <div class="name">
+        Top condulted artist
+      </div>
+      <div class="voir-plus">
+        <a href="default.asp" style="color: black">
+          View top artits
+        </a>
+      </div>
+    </div>
+    <div class="card-space">
+      <div class="card">
+        <div class="pic" style="background-image: url(https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/image1.jpg)">
+        </div>
+        <div class="pic-title">
+          Ambrose Patterson
+            <div class="note">
+              <div class="note-chiffre">
+                7.9
+              </div>
+              <i class="material-icons" style="font-size: 15px;">
+                  call_made
+              </i>
+            </div>
+        </div>
+        <div class="pic-subtitle">
+          British, 1955
+        </div>
+      </div>
+      <div class="card">
+        <div class="pic" style="background-image: url(https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/image2.jpg)">
+        </div>
+        <div class="pic-title">
+          Abraham Willaerts
+          <div class="note">
+              <div class="note-chiffre">
+                8.3
+              </div>
+              <i class="material-icons" style="font-size: 15px;">
+                  call_made
+              </i>
+            </div>
+        </div>
+        <div class="pic-subtitle">
+          Swiss, 1951
+        </div>
+      </div>
+      <div class="card">
+        <div class="pic" style="background-image: url(https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/image3.jpg)">
+        </div>
+        <div class="pic-title">
+          Richard Bell
+            <div class="note">
+              <div class="note-chiffre">
+                6.9
+              </div>
+              <i class="material-icons" style="font-size: 15px;">
+                  call_made
+              </i>
+            </div>
+        </div>
+        <div class="pic-subtitle">
+          American, 1940
+        </div>
+      </div>
+      <div class="card">
+        <div class="pic" style="background-image: url(https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/image4.jpg)">
+        </div>
+        <div class="pic-title">
+          Studio 65
+            <div class="note">
+              <div class="note-chiffre">
+                7.1
+              </div>
+              <i class="material-icons" style="font-size: 15px;">
+                  call_made
+              </i>
+            </div>
+        </div>
+        <div class="pic-subtitle">
+          Australian, 1998
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="fourth-section">
+    <div class="third-title">
+      <div class="name">
+        Discover new artist
+      </div>
+      <div class="voir-plus">
+        <a href="default.asp" style="color: black">
+          Discover other artists
+        </a>
+      </div>
+    </div>
+    <div class="card-space">
+      <div class="card">
+        <div class="pic" style="background-image: url(https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/image5.jpg)">
+        </div>
+        <div class="pic-title">
+          Joseph Zucker
+            <div class="note">
+              <div class="note-chiffre">
+                6.8
+              </div>
+              <i class="material-icons" style="font-size: 15px;">
+                  call_made
+              </i>
+            </div>
+        </div>
+        <div class="pic-subtitle">
+          American, 1941
+        </div>
+      </div>
+      <div class="card">
+        <div class="pic" style="background-image: url(https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/image6.jpg)">
+        </div>
+        <div class="pic-title">
+          Beat Streuli
+            <div class="note">
+              <div class="note-chiffre">
+                8.1
+              </div>
+              <i class="material-icons" style="font-size: 15px;">
+                  call_made
+              </i>
+            </div>
+        </div>
+        <div class="pic-subtitle">
+          Swiss, 1957
+        </div>
+      </div>
+      <div class="card">
+        <div class="pic" style="background-image: url(https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/image7.jpg)">
+        </div>
+        <div class="pic-title">
+          Alberto Giacometti
+          <div class="note">
+              <div class="note-chiffre">
+                7.9
+              </div>
+              <i class="material-icons" style="font-size: 15px;">
+                  call_made
+              </i>
+            </div>
+        </div>
+        <div class="pic-subtitle">
+          Swiss, 1966
+        </div>
+      </div>
+      <div class="card">
+        <div class="pic" style="background-image: url(https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/image8.jpg)">
+        </div>
+        <div class="pic-title">
+            Pegi Nicol MacLeod
+            <div class="note">
+              <div class="note-chiffre">
+                9.1
+              </div>
+              <i class="material-icons" style="font-size: 15px;">
+                  call_made
+              </i>
+            </div>
+        </div>
+        <div class="pic-subtitle">
+          Canadian, 1904 - 1949
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="section-five">
+    <div class="third-title">
+      <div class="name">
+        Latest blog articles
+      </div>
+      <div class="voir-plus">
+        <a href="default.asp" style="color: black">
+          All the articles
+        </a>
+      </div>
+    </div>
+    <div class="card-space">
+      <div class="card">
+        <div class="pic-five" style="background-image: url(https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/image9.jpg)">
+        </div>
+        <div class="pic-title" style="line-height: 1.2">
+          Barbara Morgan's Defining<br />Photographs of Modern Dance
+        </div>
+      </div>
+      <div class="card">
+        <div class="pic-five" style="background-image: url(https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/image10.jpg)">
+        </div>
+        <div class="pic-title" style="line-height: 1.2">
+          The Powerful Stories of Artists<br />Forced to Flee Their<br />Homelands
+        </div>
+      </div>
+      <div class="card">
+        <div class="pic-five" style="background-image: url(https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/image11.jpg)">
+        </div>
+        <div class="pic-title" style="line-height: 1.2">
+          30 chefs-d'oeuvre du musée<br />des Beaux-Arts de Lyon
+        </div>
+      </div>
+      <div class="card">
+        <div class="pic-five" style="background-image: url( https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/image12.jpg)">
+        </div>
+        <div class="pic-title" style="line-height: 1.2">
+          "She's a Leader" from South<br />Africa: Ello
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-six">
+    <div class="top">
+      <div class="droite-top">
+        <img src="https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/logo_grey.svg" alt="logo-section-six" width="60px" height="auto">
+        <spam Style="padding-left: 10px; font-size: 27px; line-height: 1.3; font-weight: 400; color: #999999">Artlytics</spam>
+        <spam Style="color: #999999; padding-left: 61px; padding-top: 3px;">A complete Art Analytics Platform</spam>
+      </div>
+      <div class="gauche-top">
+        <a href="default.asp">
+          <img src="https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/social_fb.svg" alt="fb-section-six" width="auto" height="16px" style="padding-right: 10px; cursor: pointer;">
+        </a>
+        <a href="default.asp" style="text-decoration: none ; color: black">
+          <img src="https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/social_pi.svg" alt="pt-section-six" width="auto" height="16px" style="padding-right: 10px; cursor: pointer;">
+        </a>
+        <a href="default.asp" style="text-decoration: none ; color: black">
+          <img src="https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/social_tw.svg" alt="tw-section-six" width="auto" height="16px" style="padding-right: 10px; cursor: pointer;">
+        </a>
+      </div>
+    </div>
+    <div class="middle">
+        <div class="link-middle">
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Discover
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Market Analysis
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Artists
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Auction
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Pricing
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Blog
+          </a>
+        </div>
+        <div class="link-middle">
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Popular Artists
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Pablo picasso
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Claude Monet
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Marc Chagall
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Amedeo Modigliani
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Henri Matisse
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Wassily Kandinsky
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Alberto Giacometti
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Joan Miro
+          </a>
+        </div>
+        <div class="link-middle">
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            New artists
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Pablo picasso
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Marc Chagall
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Amedeo Modigliani
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Henri Matisse
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Wassily Kandinsky
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Alberto Giacometti
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Joan Miro
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            René Magritte
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Claude Monet
+          </a>
+        </div>
+        <div class="link-middle">
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Popular Auctions
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Post-War and Contemporary Art Evening
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Auction
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Featuring Pierre Soulages
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            20th Century & Contemporary Art Evening
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Sale
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Featuring Roy Lichtenstein
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Contemporary Art Day Auction
+          </a>
+          <a href="default.asp" style="text-decoration: none ; color: #999999; cursor: pointer;">
+            Featuring hans Hartung
+          </a>
+        </div>
+    </div>
+    <div class="bot">
+      2019 Artlytics
+    </div>
+  </div>
+
+</body>
+</html>

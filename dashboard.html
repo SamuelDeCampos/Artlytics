@@ -1,0 +1,209 @@
+<!DOCTYPE  html>
+<html lang="en">
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <title >{{  }}</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        body > *{
+            font-family: 'Roboto', sans-serif;
+            transition: 0.5s;
+        }
+        a:hover{
+            color: blue !important;
+        }
+        .navbar {
+            height: 80px;
+            width: 100;
+        }
+        .navbar {
+            height: 60px;
+            width: calc(100% - 150px);
+            padding: 20px;
+            padding-left: 75px;
+            padding-right: 75px;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .onglet > *{
+            margin-left: 35px;
+        }
+        .gauche {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .nom {
+            padding-left: 10px;
+            font-size: 27px;
+            line-height: 1.3;
+            font-weight: 400;
+        }
+        .onglet {
+            display: flex;
+            align-items: center;
+        }
+        .sign-up {
+            display: block;
+            background-color: #361FFB;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 0.3em;
+            cursor: pointer;
+        }
+
+
+        .dash-top {
+            background-image: url("https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/header-image.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 60vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            text-align: baseline;
+        }
+        .top-left {
+            width: 50%
+            display: flex;
+            flex-direction: column;
+        }
+        .top-right {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .top-left-top {
+            color: #999999;
+        }
+        .dash-title {
+            color: #999999;
+        }
+        .dash-nbr {
+            font-size: 70px;
+            line-height: 2;
+            font-weight: 100;
+        }
+        .main-section {
+            padding-top = 100px;
+            max-width: 1170px;
+            margin: auto;
+        }
+    </style>
+
+</head>
+<body>
+  <div class="navbar">
+    <a href="default.asp" style="text-decoration: none ; color: black">
+      <div class="gauche">
+        <spam class="logo">
+         <img src="https://fine-arts-assets.s3.eu-central-1.amazonaws.com/homepage/logo_blue.svg" alt="logo-navbar" width="60px" height="auto">
+        </spam>
+        <spam class="nom">
+          Artlytics
+        </spam>
+      </div>
+    </a>
+    <div class="onglet">
+        <div style="cursor: pointer">
+            <a href="default.asp" style="text-decoration: none ; color: black">Discover</a>
+        </div>
+        <div style="cursor: pointer">
+            <a href="default.asp" style="text-decoration: none ; color: black">Market analysis</a>
+        </div>
+        <div style="cursor: pointer">
+            <a href="default.asp" style="text-decoration: none ; color: black">Artists</a>
+        </div>
+        <div style="cursor: pointer">
+            <a href="default.asp" style="text-decoration: none ; color: black">Auctions</a>
+        </div>
+        <div style="cursor: pointer">
+            <a href="default.asp" style="text-decoration: none ; color: black">Pricing</a>
+        </div>
+        <div style="cursor: pointer">
+            <a href="default.asp" style="text-decoration: none ; color: #98978E">Blog</a>
+        </div>
+        <div style="cursor: pointer">
+            <a href="default.asp">Sign in</a>
+        </div>
+        <div class="sign-up">
+            <a href="default.asp" style="text-decoration: none ; color: white">Sign up</a> 
+        </div>
+    </div>
+  </div>
+    <div class="dash-top">
+        <div class="top-left">
+            <div class="top-left-top">
+                HOMEPAGE > DASHBOARD
+            </div>
+            <div class="top-left-bot" style="font-size: 55px;line-height: 2.5;font-weight: 300;">
+                MyDashboard
+            </div>
+        </div>
+        <div class="top-right">
+            <div class="dash-artists" style="padding-right: 60px">
+                <div class="dash-title">
+                    FOLLOWED AERTISTS
+                </div>
+                <div class="dash-nbr">
+                    11
+                </div>
+            </div>
+            <div class="dash-movement" style="padding-right: 60px">
+                <div class="dash-title">
+                    FOLLOWED MOVEMENT
+                </div>
+                <div class="dash-nbr">
+                    05
+                </div>
+            </div>
+            <div class="dash-alerts" style="padding-right: 60px">
+                <div class="dash-title">
+                    ACTIVE ALERTS
+                </div>
+                <div class="dash-nbr">
+                    13
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-section">
+        <div class="news-field">
+            <div class="news-header">
+                <div>Last news and evolutions</div>
+                <div class="filter">
+                    <div class="display">
+                        <spam>Display</spam>
+                        <spam style="color: #999999;">All</spam>
+                        <i class="material-icons"style="color: #999999;">arrow_drop_down</i>
+                    </div>
+                    <div class="sort">
+                        <spam>Sort by</spam>
+                        <spam style="color: #999999;">Update time</spam>
+                        <i class="material-icons"style="color: #999999;">arrow_drop_down</i>
+                    </div>
+                </div>
+            </div>
+            <div class="news-main">
+                <div class="news">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
